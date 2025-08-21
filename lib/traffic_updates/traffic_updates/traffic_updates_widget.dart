@@ -3,12 +3,17 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'traffic_updates_model.dart';
 export 'traffic_updates_model.dart';
 
 class TrafficUpdatesWidget extends StatefulWidget {
   const TrafficUpdatesWidget({super.key});
+
+  static String routeName = 'Traffic_updates';
+  static String routePath = '/trafficUpdates';
 
   @override
   State<TrafficUpdatesWidget> createState() => _TrafficUpdatesWidgetState();
@@ -50,7 +55,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
           child: Stack(
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -83,7 +88,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                             _model.googleMapsCenter = latLng,
                                         initialLocation:
                                             _model.googleMapsCenter ??=
-                                                const LatLng(11.1271, 78.6569),
+                                                LatLng(11.1271, 78.6569),
                                         markerColor: GoogleMarkerColor.violet,
                                         mapType: MapType.normal,
                                         style: GoogleMapStyle.standard,
@@ -107,7 +112,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                           .secondaryBackground,
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           24.0, 24.0, 24.0, 24.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.min,
@@ -119,17 +124,38 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                             children: [
                                               Text(
                                                 'Nearby Traffic Updates',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .titleLarge
-                                                    .override(
-                                                      fontFamily: 'Inter Tight',
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleLarge
+                                                        .override(
+                                                          font: GoogleFonts
+                                                              .interTight(
+                                                            fontWeight:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleLarge
+                                                                    .fontWeight,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleLarge
+                                                                    .fontStyle,
+                                                          ),
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
                                                               .primaryText,
-                                                      letterSpacing: 0.0,
-                                                    ),
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .titleLarge
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .titleLarge
+                                                                  .fontStyle,
+                                                        ),
                                               ),
                                               InkWell(
                                                 splashColor: Colors.transparent,
@@ -140,32 +166,54 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                 onTap: () async {
                                                   // live map
 
-                                                  context
-                                                      .pushNamed('traffic_map');
+                                                  context.pushNamed(
+                                                      TrafficMapWidget
+                                                          .routeName);
                                                 },
                                                 child: Container(
                                                   decoration: BoxDecoration(
-                                                    color: const Color(0xFFE8F5E9),
+                                                    color: Color(0xFFE8F5E9),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             20.0),
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 16.0,
                                                                 8.0, 16.0),
                                                     child: Text(
                                                       'Live',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodySmall
-                                                          .override(
-                                                            fontFamily: 'Inter',
-                                                            color: const Color(
-                                                                0xFF2E7D32),
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodySmall
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodySmall
+                                                                      .fontStyle,
+                                                                ),
+                                                                color: Color(
+                                                                    0xFF2E7D32),
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontStyle,
+                                                              ),
                                                     ),
                                                   ),
                                                 ),
@@ -184,19 +232,19 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                       .width *
                                                   1.0,
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFFFFF3E0),
+                                                color: Color(0xFFFFF3E0),
                                                 borderRadius:
                                                     BorderRadius.circular(16.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 16.0, 16.0, 16.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    const Icon(
+                                                    Icon(
                                                       Icons.warning_rounded,
                                                       color: Color(0xFFEF6C00),
                                                       size: 24.0,
@@ -215,12 +263,30 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                     .of(context)
                                                                 .bodyLarge
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Inter',
-                                                                  color: const Color(
+                                                                  font:
+                                                                      GoogleFonts
+                                                                          .inter(
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .fontStyle,
+                                                                  ),
+                                                                  color: Color(
                                                                       0xFFEF6C00),
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLarge
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLarge
+                                                                      .fontStyle,
                                                                 ),
                                                           ),
                                                           Text(
@@ -229,13 +295,31 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                     .of(context)
                                                                 .bodyMedium
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Inter',
+                                                                  font:
+                                                                      GoogleFonts
+                                                                          .inter(
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontStyle,
+                                                                  ),
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
                                                                 ),
                                                           ),
                                                           Text(
@@ -244,20 +328,38 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                     .of(context)
                                                                 .bodySmall
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Inter',
+                                                                  font:
+                                                                      GoogleFonts
+                                                                          .inter(
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodySmall
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodySmall
+                                                                        .fontStyle,
+                                                                  ),
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodySmall
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodySmall
+                                                                      .fontStyle,
                                                                 ),
                                                           ),
                                                         ],
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 12.0)),
+                                                      SizedBox(width: 12.0)),
                                                 ),
                                               ),
                                             ),
@@ -274,19 +376,19 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                       .width *
                                                   1.0,
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFFE3F2FD),
+                                                color: Color(0xFFE3F2FD),
                                                 borderRadius:
                                                     BorderRadius.circular(16.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 16.0, 16.0, 16.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    const Icon(
+                                                    Icon(
                                                       Icons.construction,
                                                       color: Color(0xFF1565C0),
                                                       size: 24.0,
@@ -305,12 +407,30 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                     .of(context)
                                                                 .bodyLarge
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Inter',
-                                                                  color: const Color(
+                                                                  font:
+                                                                      GoogleFonts
+                                                                          .inter(
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .fontStyle,
+                                                                  ),
+                                                                  color: Color(
                                                                       0xFF1565C0),
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLarge
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLarge
+                                                                      .fontStyle,
                                                                 ),
                                                           ),
                                                           Text(
@@ -319,13 +439,31 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                     .of(context)
                                                                 .bodyMedium
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Inter',
+                                                                  font:
+                                                                      GoogleFonts
+                                                                          .inter(
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontStyle,
+                                                                  ),
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
                                                                 ),
                                                           ),
                                                           Text(
@@ -334,25 +472,43 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                     .of(context)
                                                                 .bodySmall
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Inter',
+                                                                  font:
+                                                                      GoogleFonts
+                                                                          .inter(
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodySmall
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodySmall
+                                                                        .fontStyle,
+                                                                  ),
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodySmall
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodySmall
+                                                                      .fontStyle,
                                                                 ),
                                                           ),
                                                         ],
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 12.0)),
+                                                      SizedBox(width: 12.0)),
                                                 ),
                                               ),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(height: 16.0)),
+                                        ].divide(SizedBox(height: 16.0)),
                                       ),
                                     ),
                                   ),
@@ -364,7 +520,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                           .secondaryBackground,
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           24.0, 24.0, 24.0, 24.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.min,
@@ -374,11 +530,32 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .titleLarge
                                                 .override(
-                                                  fontFamily: 'Inter Tight',
+                                                  font: GoogleFonts.interTight(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .titleLarge
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .titleLarge
+                                                            .fontStyle,
+                                                  ),
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleLarge
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleLarge
+                                                          .fontStyle,
                                                 ),
                                           ),
                                           Material(
@@ -400,7 +577,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                     BorderRadius.circular(16.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 16.0, 16.0, 16.0),
                                                 child: Column(
@@ -427,13 +604,30 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                       .of(context)
                                                                   .bodyLarge
                                                                   .override(
-                                                                    fontFamily:
-                                                                        'Inter',
+                                                                    font: GoogleFonts
+                                                                        .inter(
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyLarge
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyLarge
+                                                                          .fontStyle,
+                                                                    ),
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .primaryText,
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .fontStyle,
                                                                   ),
                                                             ),
                                                             Text(
@@ -442,13 +636,30 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                       .of(context)
                                                                   .bodyMedium
                                                                   .override(
-                                                                    fontFamily:
-                                                                        'Inter',
+                                                                    font: GoogleFonts
+                                                                        .inter(
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontStyle,
+                                                                    ),
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryText,
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontStyle,
                                                                   ),
                                                             ),
                                                           ],
@@ -456,7 +667,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                         Container(
                                                           decoration:
                                                               BoxDecoration(
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFFE8F5E9),
                                                             borderRadius:
                                                                 BorderRadius
@@ -465,7 +676,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         16.0,
@@ -477,12 +688,29 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                       .of(context)
                                                                   .bodySmall
                                                                   .override(
-                                                                    fontFamily:
-                                                                        'Inter',
-                                                                    color: const Color(
+                                                                    font: GoogleFonts
+                                                                        .inter(
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodySmall
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodySmall
+                                                                          .fontStyle,
+                                                                    ),
+                                                                    color: Color(
                                                                         0xFF2E7D32),
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodySmall
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodySmall
+                                                                        .fontStyle,
                                                                   ),
                                                             ),
                                                           ),
@@ -506,20 +734,38 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                   .of(context)
                                                               .bodySmall
                                                               .override(
-                                                                fontFamily:
-                                                                    'Inter',
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodySmall
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodySmall
+                                                                      .fontStyle,
+                                                                ),
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText,
                                                                 letterSpacing:
                                                                     0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontStyle,
                                                               ),
                                                         ),
                                                       ].divide(
-                                                          const SizedBox(width: 8.0)),
+                                                          SizedBox(width: 8.0)),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(height: 12.0)),
+                                                      SizedBox(height: 12.0)),
                                                 ),
                                               ),
                                             ),
@@ -543,7 +789,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                     BorderRadius.circular(16.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 16.0, 16.0, 16.0),
                                                 child: Column(
@@ -570,13 +816,30 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                       .of(context)
                                                                   .bodyLarge
                                                                   .override(
-                                                                    fontFamily:
-                                                                        'Inter',
+                                                                    font: GoogleFonts
+                                                                        .inter(
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyLarge
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyLarge
+                                                                          .fontStyle,
+                                                                    ),
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .primaryText,
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyLarge
+                                                                        .fontStyle,
                                                                   ),
                                                             ),
                                                             Text(
@@ -585,13 +848,30 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                       .of(context)
                                                                   .bodyMedium
                                                                   .override(
-                                                                    fontFamily:
-                                                                        'Inter',
+                                                                    font: GoogleFonts
+                                                                        .inter(
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontStyle,
+                                                                    ),
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryText,
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontStyle,
                                                                   ),
                                                             ),
                                                           ],
@@ -599,7 +879,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                         Container(
                                                           decoration:
                                                               BoxDecoration(
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFFFFF3E0),
                                                             borderRadius:
                                                                 BorderRadius
@@ -608,7 +888,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         16.0,
@@ -620,12 +900,29 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                       .of(context)
                                                                   .bodySmall
                                                                   .override(
-                                                                    fontFamily:
-                                                                        'Inter',
-                                                                    color: const Color(
+                                                                    font: GoogleFonts
+                                                                        .inter(
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodySmall
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodySmall
+                                                                          .fontStyle,
+                                                                    ),
+                                                                    color: Color(
                                                                         0xFFEF6C00),
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodySmall
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodySmall
+                                                                        .fontStyle,
                                                                   ),
                                                             ),
                                                           ),
@@ -649,25 +946,43 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                   .of(context)
                                                               .bodySmall
                                                               .override(
-                                                                fontFamily:
-                                                                    'Inter',
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodySmall
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodySmall
+                                                                      .fontStyle,
+                                                                ),
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText,
                                                                 letterSpacing:
                                                                     0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontStyle,
                                                               ),
                                                         ),
                                                       ].divide(
-                                                          const SizedBox(width: 8.0)),
+                                                          SizedBox(width: 8.0)),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(height: 12.0)),
+                                                      SizedBox(height: 12.0)),
                                                 ),
                                               ),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(height: 16.0)),
+                                        ].divide(SizedBox(height: 16.0)),
                                       ),
                                     ),
                                   ),
@@ -679,7 +994,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                           .secondaryBackground,
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           24.0, 24.0, 24.0, 24.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.min,
@@ -689,14 +1004,35 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .titleLarge
                                                 .override(
-                                                  fontFamily: 'Inter Tight',
+                                                  font: GoogleFonts.interTight(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .titleLarge
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .titleLarge
+                                                            .fontStyle,
+                                                  ),
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryText,
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleLarge
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleLarge
+                                                          .fontStyle,
                                                 ),
                                           ),
-                                          SizedBox(
+                                          Container(
                                             height: 120.0,
                                             child: ListView(
                                               padding: EdgeInsets.zero,
@@ -743,7 +1079,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: MediaQuery
@@ -757,7 +1093,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                     .height *
                                                                 1.0,
                                                             decoration:
-                                                                const BoxDecoration(
+                                                                BoxDecoration(
                                                               gradient:
                                                                   LinearGradient(
                                                                 colors: [
@@ -783,12 +1119,12 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      const AlignmentDirectional(
+                                                                      AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -800,12 +1136,19 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                               context)
                                                                           .bodySmall
                                                                           .override(
-                                                                            fontFamily:
-                                                                                'Inter',
+                                                                            font:
+                                                                                GoogleFonts.inter(
+                                                                              fontWeight: FlutterFlowTheme.of(context).bodySmall.fontWeight,
+                                                                              fontStyle: FlutterFlowTheme.of(context).bodySmall.fontStyle,
+                                                                            ),
                                                                             color:
                                                                                 Colors.white,
                                                                             letterSpacing:
                                                                                 0.0,
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).bodySmall.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).bodySmall.fontStyle,
                                                                           ),
                                                                     ),
                                                                   ),
@@ -883,7 +1226,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                       .height *
                                                                   1.0,
                                                           decoration:
-                                                              const BoxDecoration(
+                                                              BoxDecoration(
                                                             gradient:
                                                                 LinearGradient(
                                                               colors: [
@@ -904,11 +1247,11 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         0.0,
                                                                         1.0),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -920,12 +1263,23 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                             context)
                                                                         .bodySmall
                                                                         .override(
-                                                                          fontFamily:
-                                                                              'Inter',
+                                                                          font:
+                                                                              GoogleFonts.inter(
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).bodySmall.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).bodySmall.fontStyle,
+                                                                          ),
                                                                           color:
                                                                               Colors.white,
                                                                           letterSpacing:
                                                                               0.0,
+                                                                          fontWeight: FlutterFlowTheme.of(context)
+                                                                              .bodySmall
+                                                                              .fontWeight,
+                                                                          fontStyle: FlutterFlowTheme.of(context)
+                                                                              .bodySmall
+                                                                              .fontStyle,
                                                                         ),
                                                                   ),
                                                                 ),
@@ -1000,7 +1354,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                       .height *
                                                                   1.0,
                                                           decoration:
-                                                              const BoxDecoration(
+                                                              BoxDecoration(
                                                             gradient:
                                                                 LinearGradient(
                                                               colors: [
@@ -1019,11 +1373,11 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                           ),
                                                           child: Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.0, 1.0),
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -1035,12 +1389,27 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                                         context)
                                                                     .bodySmall
                                                                     .override(
-                                                                      fontFamily:
-                                                                          'Inter',
+                                                                      font: GoogleFonts
+                                                                          .inter(
+                                                                        fontWeight: FlutterFlowTheme.of(context)
+                                                                            .bodySmall
+                                                                            .fontWeight,
+                                                                        fontStyle: FlutterFlowTheme.of(context)
+                                                                            .bodySmall
+                                                                            .fontStyle,
+                                                                      ),
                                                                       color: Colors
                                                                           .white,
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodySmall
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodySmall
+                                                                          .fontStyle,
                                                                     ),
                                                               ),
                                                             ),
@@ -1050,10 +1419,10 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(width: 16.0)),
+                                              ].divide(SizedBox(width: 16.0)),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(height: 16.0)),
+                                        ].divide(SizedBox(height: 16.0)),
                                       ),
                                     ),
                                   ),
@@ -1082,17 +1451,30 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                           text: 'Button',
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
                                   color: Colors.white,
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
                                 ),
                             elevation: 0.0,
                             borderRadius: BorderRadius.circular(8.0),
@@ -1122,7 +1504,7 @@ class _TrafficUpdatesWidgetState extends State<TrafficUpdatesWidget> {
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
-                  context.pushNamed('CHOICES');
+                  context.pushNamed(ChoicesWidget.routeName);
                 },
                 child: Icon(
                   Icons.arrow_back,

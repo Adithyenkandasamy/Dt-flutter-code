@@ -2,12 +2,17 @@ import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'nearby_charging_stations_model.dart';
 export 'nearby_charging_stations_model.dart';
 
 class NearbyChargingStationsWidget extends StatefulWidget {
   const NearbyChargingStationsWidget({super.key});
+
+  static String routeName = 'nearby_charging_stations';
+  static String routePath = '/nearbyChargingStations';
 
   @override
   State<NearbyChargingStationsWidget> createState() =>
@@ -58,15 +63,24 @@ class _NearbyChargingStationsWidgetState
               size: 24.0,
             ),
             onPressed: () async {
-              context.pushNamed('charging_stations');
+              context.pushNamed(ChargingStationsWidget.routeName);
             },
           ),
           title: Text(
             'Charging Stations',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  font: GoogleFonts.interTight(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+                  ),
                   color: FlutterFlowTheme.of(context).primaryText,
                   letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                  fontStyle:
+                      FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                 ),
           ),
           actions: [
@@ -108,13 +122,13 @@ class _NearbyChargingStationsWidgetState
                     child: Stack(
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: FlutterFlowGoogleMap(
                             controller: _model.googleMapsController,
                             onCameraIdle: (latLng) => safeSetState(
                                 () => _model.googleMapsCenter = latLng),
                             initialLocation: _model.googleMapsCenter ??=
-                                const LatLng(11.1271, 78.6569),
+                                LatLng(11.1271, 78.6569),
                             markerColor: GoogleMarkerColor.red,
                             mapType: MapType.normal,
                             style: GoogleMapStyle.standard,
@@ -145,7 +159,7 @@ class _NearbyChargingStationsWidgetState
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 20.0, 20.0, 20.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -159,8 +173,21 @@ class _NearbyChargingStationsWidgetState
                                 style: FlutterFlowTheme.of(context)
                                     .headlineSmall
                                     .override(
-                                      fontFamily: 'Inter Tight',
+                                      font: GoogleFonts.interTight(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .headlineSmall
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .headlineSmall
+                                            .fontStyle,
+                                      ),
                                       letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontStyle,
                                     ),
                               ),
                               Text(
@@ -168,10 +195,23 @@ class _NearbyChargingStationsWidgetState
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      font: GoogleFonts.inter(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
                                       color:
                                           FlutterFlowTheme.of(context).success,
                                       letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                     ),
                               ),
                             ],
@@ -184,7 +224,7 @@ class _NearbyChargingStationsWidgetState
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 16.0, 16.0, 16.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -204,9 +244,21 @@ class _NearbyChargingStationsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight: FontWeight.w600,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyLarge
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontStyle,
                                                 ),
                                           ),
                                           Text(
@@ -214,11 +266,32 @@ class _NearbyChargingStationsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
                                                 ),
                                           ),
                                         ],
@@ -227,13 +300,13 @@ class _NearbyChargingStationsWidgetState
                                         width: 80.0,
                                         height: 32.0,
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFFE8F5E9),
+                                          color: Color(0xFFE8F5E9),
                                           borderRadius:
                                               BorderRadius.circular(16.0),
                                         ),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   4.0, 0.0, 4.0, 0.0),
                                           child: Text(
                                             'Available',
@@ -241,11 +314,32 @@ class _NearbyChargingStationsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontStyle,
+                                                  ),
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .success,
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontStyle,
                                                 ),
                                           ),
                                         ),
@@ -269,11 +363,32 @@ class _NearbyChargingStationsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontStyle,
                                                 ),
                                           ),
-                                        ].divide(const SizedBox(width: 4.0)),
+                                        ].divide(SizedBox(width: 4.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -289,24 +404,45 @@ class _NearbyChargingStationsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontStyle,
                                                 ),
                                           ),
-                                        ].divide(const SizedBox(width: 4.0)),
+                                        ].divide(SizedBox(width: 4.0)),
                                       ),
-                                    ].divide(const SizedBox(width: 16.0)),
+                                    ].divide(SizedBox(width: 16.0)),
                                   ),
-                                ].divide(const SizedBox(height: 12.0)),
+                                ].divide(SizedBox(height: 12.0)),
                               ),
                             ),
                           ),
-                        ].divide(const SizedBox(height: 16.0)),
+                        ].divide(SizedBox(height: 16.0)),
                       ),
                     ),
                   ),
                 ),
-              ].divide(const SizedBox(height: 24.0)),
+              ].divide(SizedBox(height: 24.0)),
             ),
           ),
         ),

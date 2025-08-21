@@ -2,12 +2,17 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'services_model.dart';
 export 'services_model.dart';
 
 class ServicesWidget extends StatefulWidget {
   const ServicesWidget({super.key});
+
+  static String routeName = 'services';
+  static String routePath = '/services';
 
   @override
   State<ServicesWidget> createState() => _ServicesWidgetState();
@@ -56,24 +61,33 @@ class _ServicesWidgetState extends State<ServicesWidget> {
               size: 24.0,
             ),
             onPressed: () async {
-              context.pushNamed('smart_grid');
+              context.pushNamed(SmartGridWidget.routeName);
             },
           ),
           title: Text(
             'Vehicle Services',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  font: GoogleFonts.interTight(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+                  ),
                   letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                  fontStyle:
+                      FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -92,7 +106,7 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 24.0, 24.0, 24.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -102,8 +116,21 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontStyle,
                                   ),
                             ),
                             Row(
@@ -135,8 +162,25 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
                                           .override(
-                                            fontFamily: 'Inter Tight',
+                                            font: GoogleFonts.interTight(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLarge
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLarge
+                                                      .fontStyle,
+                                            ),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLarge
+                                                    .fontStyle,
                                           ),
                                     ),
                                     Text(
@@ -144,38 +188,74 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
                                           ),
                                     ),
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFE8F5E9),
+                                        color: Color(0xFFE8F5E9),
                                         borderRadius:
                                             BorderRadius.circular(20.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             4.0, 12.0, 4.0, 12.0),
                                         child: Text(
                                           'Health: Good',
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
                                               .override(
-                                                fontFamily: 'Inter',
-                                                color: const Color(0xFF2E7D32),
+                                                font: GoogleFonts.inter(
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontStyle,
+                                                ),
+                                                color: Color(0xFF2E7D32),
                                                 letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .fontStyle,
                                               ),
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(height: 4.0)),
+                                  ].divide(SizedBox(height: 4.0)),
                                 ),
-                              ].divide(const SizedBox(width: 16.0)),
+                              ].divide(SizedBox(width: 16.0)),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -193,7 +273,7 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 24.0, 24.0, 24.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -203,8 +283,21 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontStyle,
                                   ),
                             ),
                             Container(
@@ -214,7 +307,7 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -235,10 +328,23 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyLarge
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyLarge
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .fontStyle,
                                                       ),
                                             ),
                                             Text(
@@ -247,25 +353,46 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ],
                                         ),
                                         Container(
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFFE3F2FD),
+                                            color: Color(0xFFE3F2FD),
                                             borderRadius:
                                                 BorderRadius.circular(20.0),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     4.0, 12.0, 4.0, 12.0),
                                             child: Text(
                                               'Completed',
@@ -273,10 +400,31 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
-                                                            const Color(0xFF1565C0),
+                                                            Color(0xFF1565C0),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ),
@@ -299,10 +447,23 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyLarge
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyLarge
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .fontStyle,
                                                       ),
                                             ),
                                             Text(
@@ -311,25 +472,46 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ],
                                         ),
                                         Container(
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFFE3F2FD),
+                                            color: Color(0xFFE3F2FD),
                                             borderRadius:
                                                 BorderRadius.circular(20.0),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     4.0, 12.0, 4.0, 12.0),
                                             child: Text(
                                               'Completed',
@@ -337,10 +519,31 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
-                                                            const Color(0xFF1565C0),
+                                                            Color(0xFF1565C0),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ),
@@ -363,10 +566,23 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyLarge
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyLarge
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .fontStyle,
                                                       ),
                                             ),
                                             Text(
@@ -375,25 +591,46 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ],
                                         ),
                                         Container(
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFFE3F2FD),
+                                            color: Color(0xFFE3F2FD),
                                             borderRadius:
                                                 BorderRadius.circular(20.0),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     4.0, 12.0, 4.0, 12.0),
                                             child: Text(
                                               'Completed',
@@ -401,21 +638,42 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
-                                                            const Color(0xFF1565C0),
+                                                            Color(0xFF1565C0),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ),
                                         ),
                                       ],
                                     ),
-                                  ].divide(const SizedBox(height: 12.0)),
+                                  ].divide(SizedBox(height: 12.0)),
                                 ),
                               ),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -433,7 +691,7 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 24.0, 24.0, 24.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -443,11 +701,24 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontStyle,
                                   ),
                             ),
-                            SizedBox(
+                            Container(
                               height: 200.0,
                               child: ListView(
                                 padding: EdgeInsets.zero,
@@ -463,7 +734,7 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -501,10 +772,24 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                             context)
                                                         .bodyLarge
                                                         .override(
-                                                          fontFamily: 'Inter',
+                                                          font:
+                                                              GoogleFonts.inter(
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLarge
+                                                                    .fontStyle,
+                                                          ),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w600,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyLarge
+                                                                  .fontStyle,
                                                         ),
                                                   ),
                                                   Text(
@@ -513,21 +798,43 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                             context)
                                                         .bodySmall
                                                         .override(
-                                                          fontFamily: 'Inter',
+                                                          font:
+                                                              GoogleFonts.inter(
+                                                            fontWeight:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontWeight,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontStyle,
+                                                          ),
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondaryText,
                                                           letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
                                                         ),
                                                   ),
                                                 ],
                                               ),
-                                            ].divide(const SizedBox(width: 12.0)),
+                                            ].divide(SizedBox(width: 12.0)),
                                           ),
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.star,
                                                 color: Color(0xFFFFC107),
                                                 size: 16.0,
@@ -538,11 +845,33 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .bodySmall
                                                         .override(
-                                                          fontFamily: 'Inter',
+                                                          font:
+                                                              GoogleFonts.inter(
+                                                            fontWeight:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontWeight,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontStyle,
+                                                          ),
                                                           letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
                                                         ),
                                               ),
-                                            ].divide(const SizedBox(width: 8.0)),
+                                            ].divide(SizedBox(width: 8.0)),
                                           ),
                                           FFButtonWidget(
                                             onPressed: () {
@@ -554,9 +883,9 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                       .width *
                                                   1.0,
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -565,19 +894,40 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .info,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                               elevation: 0.0,
                                               borderRadius:
                                                   BorderRadius.circular(20.0),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(height: 12.0)),
+                                        ].divide(SizedBox(height: 12.0)),
                                       ),
                                     ),
                                   ),
@@ -589,7 +939,7 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -627,10 +977,24 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                             context)
                                                         .bodyLarge
                                                         .override(
-                                                          fontFamily: 'Inter',
+                                                          font:
+                                                              GoogleFonts.inter(
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLarge
+                                                                    .fontStyle,
+                                                          ),
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w600,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyLarge
+                                                                  .fontStyle,
                                                         ),
                                                   ),
                                                   Text(
@@ -639,21 +1003,43 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                             context)
                                                         .bodySmall
                                                         .override(
-                                                          fontFamily: 'Inter',
+                                                          font:
+                                                              GoogleFonts.inter(
+                                                            fontWeight:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontWeight,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontStyle,
+                                                          ),
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondaryText,
                                                           letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
                                                         ),
                                                   ),
                                                 ],
                                               ),
-                                            ].divide(const SizedBox(width: 12.0)),
+                                            ].divide(SizedBox(width: 12.0)),
                                           ),
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.star,
                                                 color: Color(0xFFFFC107),
                                                 size: 16.0,
@@ -664,11 +1050,33 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .bodySmall
                                                         .override(
-                                                          fontFamily: 'Inter',
+                                                          font:
+                                                              GoogleFonts.inter(
+                                                            fontWeight:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontWeight,
+                                                            fontStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodySmall
+                                                                    .fontStyle,
+                                                          ),
                                                           letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
                                                         ),
                                               ),
-                                            ].divide(const SizedBox(width: 8.0)),
+                                            ].divide(SizedBox(width: 8.0)),
                                           ),
                                           FFButtonWidget(
                                             onPressed: () {
@@ -680,9 +1088,9 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                       .width *
                                                   1.0,
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -691,26 +1099,47 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .info,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                               elevation: 0.0,
                                               borderRadius:
                                                   BorderRadius.circular(20.0),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(height: 12.0)),
+                                        ].divide(SizedBox(height: 12.0)),
                                       ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 16.0)),
+                                ].divide(SizedBox(width: 16.0)),
                               ),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -728,7 +1157,7 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 24.0, 24.0, 24.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -738,8 +1167,21 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontStyle,
                                   ),
                             ),
                             Row(
@@ -753,11 +1195,11 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                       width: 50.0,
                                       height: 50.0,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFFFEBEE),
+                                        color: Color(0xFFFFEBEE),
                                         borderRadius:
                                             BorderRadius.circular(25.0),
                                       ),
-                                      child: const Icon(
+                                      child: Icon(
                                         Icons.local_phone,
                                         color: Color(0xFFC62828),
                                         size: 24.0,
@@ -773,8 +1215,27 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
                                               .override(
-                                                fontFamily: 'Inter',
+                                                font: GoogleFonts.inter(
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontStyle,
+                                                ),
                                                 letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontStyle,
                                               ),
                                         ),
                                         Text(
@@ -782,16 +1243,35 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
                                               .override(
-                                                fontFamily: 'Inter',
+                                                font: GoogleFonts.inter(
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontStyle,
+                                                ),
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
                                                 letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .fontStyle,
                                               ),
                                         ),
                                       ],
                                     ),
-                                  ].divide(const SizedBox(width: 12.0)),
+                                  ].divide(SizedBox(width: 12.0)),
                                 ),
                               ],
                             ),
@@ -803,17 +1283,30 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                               options: FFButtonOptions(
                                 width: 80.0,
                                 height: 40.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: const Color(0xFFC62828),
+                                color: Color(0xFFC62828),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      font: GoogleFonts.inter(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
                                       color: FlutterFlowTheme.of(context).info,
                                       letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                     ),
                                 elevation: 0.0,
                                 borderRadius: BorderRadius.circular(20.0),
@@ -830,11 +1323,11 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                       width: 50.0,
                                       height: 50.0,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFE8F5E9),
+                                        color: Color(0xFFE8F5E9),
                                         borderRadius:
                                             BorderRadius.circular(25.0),
                                       ),
-                                      child: const Icon(
+                                      child: Icon(
                                         Icons.support_agent,
                                         color: Color(0xFF2E7D32),
                                         size: 24.0,
@@ -850,8 +1343,27 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
                                               .override(
-                                                fontFamily: 'Inter',
+                                                font: GoogleFonts.inter(
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontStyle,
+                                                ),
                                                 letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontStyle,
                                               ),
                                         ),
                                         Text(
@@ -859,16 +1371,35 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
                                               .override(
-                                                fontFamily: 'Inter',
+                                                font: GoogleFonts.inter(
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontStyle,
+                                                ),
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
                                                 letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .fontStyle,
                                               ),
                                         ),
                                       ],
                                     ),
-                                  ].divide(const SizedBox(width: 12.0)),
+                                  ].divide(SizedBox(width: 12.0)),
                                 ),
                                 FFButtonWidget(
                                   onPressed: () {
@@ -878,18 +1409,35 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                   options: FFButtonOptions(
                                     width: 80.0,
                                     height: 40.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0xFF2E7D32),
+                                    color: Color(0xFF2E7D32),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
                                           color:
                                               FlutterFlowTheme.of(context).info,
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                         ),
                                     elevation: 0.0,
                                     borderRadius: BorderRadius.circular(20.0),
@@ -897,12 +1445,12 @@ class _ServicesWidgetState extends State<ServicesWidget> {
                                 ),
                               ],
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
                   ),
-                ].divide(const SizedBox(height: 24.0)),
+                ].divide(SizedBox(height: 24.0)),
               ),
             ),
           ),

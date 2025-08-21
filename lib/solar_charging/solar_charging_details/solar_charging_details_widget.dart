@@ -1,12 +1,17 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'solar_charging_details_model.dart';
 export 'solar_charging_details_model.dart';
 
 class SolarChargingDetailsWidget extends StatefulWidget {
   const SolarChargingDetailsWidget({super.key});
+
+  static String routeName = 'solar_charging_details';
+  static String routePath = '/solarChargingDetails';
 
   @override
   State<SolarChargingDetailsWidget> createState() =>
@@ -56,18 +61,27 @@ class _SolarChargingDetailsWidgetState
               size: 24.0,
             ),
             onPressed: () async {
-              context.pushNamed('CHOICES');
+              context.pushNamed(ChoicesWidget.routeName);
             },
           ),
           title: Text(
             'Solar Charging Details',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  font: GoogleFonts.interTight(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+                  ),
                   color: FlutterFlowTheme.of(context).info,
                   letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                  fontStyle:
+                      FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -85,7 +99,7 @@ class _SolarChargingDetailsWidgetState
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+                        EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -103,10 +117,25 @@ class _SolarChargingDetailsWidgetState
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Inter',
+                                        font: GoogleFonts.inter(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
                                         color:
                                             FlutterFlowTheme.of(context).info,
                                         letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                       ),
                                 ),
                                 Text(
@@ -114,10 +143,25 @@ class _SolarChargingDetailsWidgetState
                                   style: FlutterFlowTheme.of(context)
                                       .displaySmall
                                       .override(
-                                        fontFamily: 'Inter Tight',
+                                        font: GoogleFonts.interTight(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .displaySmall
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .displaySmall
+                                                  .fontStyle,
+                                        ),
                                         color:
                                             FlutterFlowTheme.of(context).info,
                                         letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .displaySmall
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .displaySmall
+                                            .fontStyle,
                                       ),
                                 ),
                               ],
@@ -126,7 +170,7 @@ class _SolarChargingDetailsWidgetState
                               width: 60.0,
                               height: 60.0,
                               decoration: BoxDecoration(
-                                color: const Color(0x33FFFFFF),
+                                color: Color(0x33FFFFFF),
                                 borderRadius: BorderRadius.circular(30.0),
                               ),
                               child: Icon(
@@ -150,10 +194,25 @@ class _SolarChargingDetailsWidgetState
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Inter',
+                                        font: GoogleFonts.inter(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
                                         color:
                                             FlutterFlowTheme.of(context).info,
                                         letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                       ),
                                 ),
                                 Text(
@@ -161,10 +220,25 @@ class _SolarChargingDetailsWidgetState
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium
                                       .override(
-                                        fontFamily: 'Inter Tight',
+                                        font: GoogleFonts.interTight(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineMedium
+                                                  .fontStyle,
+                                        ),
                                         color:
                                             FlutterFlowTheme.of(context).info,
                                         letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .headlineMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .headlineMedium
+                                            .fontStyle,
                                       ),
                                 ),
                               ],
@@ -174,9 +248,22 @@ class _SolarChargingDetailsWidgetState
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
-                                    fontFamily: 'Inter',
+                                    font: GoogleFonts.inter(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .bodySmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodySmall
+                                          .fontStyle,
+                                    ),
                                     color: Colors.green,
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .bodySmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodySmall
+                                        .fontStyle,
                                   ),
                             ),
                           ],
@@ -198,7 +285,7 @@ class _SolarChargingDetailsWidgetState
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 20.0, 20.0, 20.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -208,8 +295,21 @@ class _SolarChargingDetailsWidgetState
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontStyle,
+                                  ),
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .fontStyle,
                                 ),
                           ),
                           Row(
@@ -225,8 +325,25 @@ class _SolarChargingDetailsWidgetState
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                         ),
                                   ),
                                   Text(
@@ -234,24 +351,41 @@ class _SolarChargingDetailsWidgetState
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
-                                          fontFamily: 'Inter Tight',
+                                          font: GoogleFonts.interTight(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .headlineMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .headlineMedium
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineMedium
+                                                  .fontStyle,
                                         ),
                                   ),
                                 ],
                               ),
-                              const Icon(
+                              Icon(
                                 Icons.battery_charging_full,
                                 color: Colors.green,
                                 size: 32.0,
                               ),
                             ],
                           ),
-                          SizedBox(
+                          Container(
                             width: double.infinity,
                             child: Slider(
                               activeColor: Colors.green,
-                              inactiveColor: const Color(0xFFE0E0E0),
+                              inactiveColor: Color(0xFFE0E0E0),
                               min: 0.0,
                               max: 100.0,
                               value: _model.sliderValue ??= 75.0,
@@ -272,8 +406,21 @@ class _SolarChargingDetailsWidgetState
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      font: GoogleFonts.inter(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
                                       letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                     ),
                               ),
                               Text(
@@ -281,13 +428,26 @@ class _SolarChargingDetailsWidgetState
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(
-                                      fontFamily: 'Inter',
+                                      font: GoogleFonts.inter(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyLarge
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyLarge
+                                            .fontStyle,
+                                      ),
                                       letterSpacing: 0.0,
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .bodyLarge
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyLarge
+                                          .fontStyle,
                                     ),
                               ),
                             ],
                           ),
-                        ].divide(const SizedBox(height: 16.0)),
+                        ].divide(SizedBox(height: 16.0)),
                       ),
                     ),
                   ),
@@ -298,7 +458,7 @@ class _SolarChargingDetailsWidgetState
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    context.pushNamed('solar_charge2');
+                    context.pushNamed(SolarCharge2Widget.routeName);
                   },
                   child: Material(
                     color: Colors.transparent,
@@ -313,7 +473,7 @@ class _SolarChargingDetailsWidgetState
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -323,8 +483,21 @@ class _SolarChargingDetailsWidgetState
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .headlineSmall
+                                          .fontStyle,
+                                    ),
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontStyle,
                                   ),
                             ),
                             Row(
@@ -337,24 +510,25 @@ class _SolarChargingDetailsWidgetState
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed('solar_charge2');
+                                    context.pushNamed(
+                                        SolarCharge2Widget.routeName);
                                   },
                                   child: Container(
                                     width: 100.0,
                                     height: 100.0,
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFE3F2FD),
+                                      color: Color(0xFFE3F2FD),
                                       borderRadius: BorderRadius.circular(16.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 12.0, 12.0, 12.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Icon(
+                                          Icon(
                                             Icons.speed,
                                             color: Color(0xFF1565C0),
                                             size: 32.0,
@@ -364,8 +538,29 @@ class _SolarChargingDetailsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontStyle,
                                                 ),
                                           ),
                                           Text(
@@ -373,12 +568,33 @@ class _SolarChargingDetailsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  fontFamily: 'Inter',
-                                                  color: const Color(0xFF1565C0),
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyLarge
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyLarge
+                                                            .fontStyle,
+                                                  ),
+                                                  color: Color(0xFF1565C0),
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontStyle,
                                                 ),
                                           ),
-                                        ].divide(const SizedBox(height: 8.0)),
+                                        ].divide(SizedBox(height: 8.0)),
                                       ),
                                     ),
                                   ),
@@ -389,24 +605,25 @@ class _SolarChargingDetailsWidgetState
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed('solar_charge2');
+                                    context.pushNamed(
+                                        SolarCharge2Widget.routeName);
                                   },
                                   child: Container(
                                     width: 100.0,
                                     height: 100.0,
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFE8F5E9),
+                                      color: Color(0xFFE8F5E9),
                                       borderRadius: BorderRadius.circular(16.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 12.0, 12.0, 12.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Icon(
+                                          Icon(
                                             Icons.eco,
                                             color: Color(0xFF2E7D32),
                                             size: 32.0,
@@ -416,8 +633,29 @@ class _SolarChargingDetailsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontStyle,
                                                 ),
                                           ),
                                           Text(
@@ -425,12 +663,33 @@ class _SolarChargingDetailsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  fontFamily: 'Inter',
-                                                  color: const Color(0xFF2E7D32),
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyLarge
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyLarge
+                                                            .fontStyle,
+                                                  ),
+                                                  color: Color(0xFF2E7D32),
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontStyle,
                                                 ),
                                           ),
-                                        ].divide(const SizedBox(height: 8.0)),
+                                        ].divide(SizedBox(height: 8.0)),
                                       ),
                                     ),
                                   ),
@@ -441,24 +700,25 @@ class _SolarChargingDetailsWidgetState
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed('solar_charge2');
+                                    context.pushNamed(
+                                        SolarCharge2Widget.routeName);
                                   },
                                   child: Container(
                                     width: 100.0,
                                     height: 100.0,
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFFFF3E0),
+                                      color: Color(0xFFFFF3E0),
                                       borderRadius: BorderRadius.circular(16.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 12.0, 12.0, 12.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Icon(
+                                          Icon(
                                             Icons.savings,
                                             color: Color(0xFFEF6C00),
                                             size: 32.0,
@@ -468,8 +728,29 @@ class _SolarChargingDetailsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodySmall
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodySmall
+                                                          .fontStyle,
                                                 ),
                                           ),
                                           Text(
@@ -477,19 +758,40 @@ class _SolarChargingDetailsWidgetState
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  fontFamily: 'Inter',
-                                                  color: const Color(0xFFEF6C00),
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyLarge
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyLarge
+                                                            .fontStyle,
+                                                  ),
+                                                  color: Color(0xFFEF6C00),
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontStyle,
                                                 ),
                                           ),
-                                        ].divide(const SizedBox(height: 8.0)),
+                                        ].divide(SizedBox(height: 8.0)),
                                       ),
                                     ),
                                   ),
                                 ),
                               ],
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -508,7 +810,7 @@ class _SolarChargingDetailsWidgetState
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 20.0, 20.0, 20.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -518,8 +820,21 @@ class _SolarChargingDetailsWidgetState
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontStyle,
+                                  ),
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .fontStyle,
                                 ),
                           ),
                           Row(
@@ -537,7 +852,7 @@ class _SolarChargingDetailsWidgetState
                                     decoration: BoxDecoration(
                                       color:
                                           FlutterFlowTheme.of(context).primary,
-                                      borderRadius: const BorderRadius.only(
+                                      borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(0.0),
                                         bottomRight: Radius.circular(0.0),
                                         topLeft: Radius.circular(8.0),
@@ -550,8 +865,25 @@ class _SolarChargingDetailsWidgetState
                                     style: FlutterFlowTheme.of(context)
                                         .bodySmall
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontStyle,
                                         ),
                                   ),
                                 ],
@@ -566,7 +898,7 @@ class _SolarChargingDetailsWidgetState
                                     decoration: BoxDecoration(
                                       color:
                                           FlutterFlowTheme.of(context).primary,
-                                      borderRadius: const BorderRadius.only(
+                                      borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(0.0),
                                         bottomRight: Radius.circular(0.0),
                                         topLeft: Radius.circular(8.0),
@@ -579,8 +911,25 @@ class _SolarChargingDetailsWidgetState
                                     style: FlutterFlowTheme.of(context)
                                         .bodySmall
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontStyle,
                                         ),
                                   ),
                                 ],
@@ -595,7 +944,7 @@ class _SolarChargingDetailsWidgetState
                                     decoration: BoxDecoration(
                                       color:
                                           FlutterFlowTheme.of(context).primary,
-                                      borderRadius: const BorderRadius.only(
+                                      borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(0.0),
                                         bottomRight: Radius.circular(0.0),
                                         topLeft: Radius.circular(8.0),
@@ -608,8 +957,25 @@ class _SolarChargingDetailsWidgetState
                                     style: FlutterFlowTheme.of(context)
                                         .bodySmall
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontStyle,
                                         ),
                                   ),
                                 ],
@@ -624,7 +990,7 @@ class _SolarChargingDetailsWidgetState
                                     decoration: BoxDecoration(
                                       color:
                                           FlutterFlowTheme.of(context).primary,
-                                      borderRadius: const BorderRadius.only(
+                                      borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(0.0),
                                         bottomRight: Radius.circular(0.0),
                                         topLeft: Radius.circular(8.0),
@@ -637,8 +1003,25 @@ class _SolarChargingDetailsWidgetState
                                     style: FlutterFlowTheme.of(context)
                                         .bodySmall
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontStyle,
                                         ),
                                   ),
                                 ],
@@ -653,7 +1036,7 @@ class _SolarChargingDetailsWidgetState
                                     decoration: BoxDecoration(
                                       color:
                                           FlutterFlowTheme.of(context).primary,
-                                      borderRadius: const BorderRadius.only(
+                                      borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(0.0),
                                         bottomRight: Radius.circular(0.0),
                                         topLeft: Radius.circular(8.0),
@@ -666,8 +1049,25 @@ class _SolarChargingDetailsWidgetState
                                     style: FlutterFlowTheme.of(context)
                                         .bodySmall
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontStyle,
                                         ),
                                   ),
                                 ],
@@ -682,7 +1082,7 @@ class _SolarChargingDetailsWidgetState
                                     decoration: BoxDecoration(
                                       color:
                                           FlutterFlowTheme.of(context).primary,
-                                      borderRadius: const BorderRadius.only(
+                                      borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(0.0),
                                         bottomRight: Radius.circular(0.0),
                                         topLeft: Radius.circular(8.0),
@@ -695,8 +1095,25 @@ class _SolarChargingDetailsWidgetState
                                     style: FlutterFlowTheme.of(context)
                                         .bodySmall
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontStyle,
                                         ),
                                   ),
                                 ],
@@ -711,7 +1128,7 @@ class _SolarChargingDetailsWidgetState
                                     decoration: BoxDecoration(
                                       color:
                                           FlutterFlowTheme.of(context).primary,
-                                      borderRadius: const BorderRadius.only(
+                                      borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(0.0),
                                         bottomRight: Radius.circular(0.0),
                                         topLeft: Radius.circular(8.0),
@@ -724,20 +1141,37 @@ class _SolarChargingDetailsWidgetState
                                     style: FlutterFlowTheme.of(context)
                                         .bodySmall
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmall
+                                                  .fontStyle,
                                         ),
                                   ),
                                 ],
                               ),
                             ],
                           ),
-                        ].divide(const SizedBox(height: 16.0)),
+                        ].divide(SizedBox(height: 16.0)),
                       ),
                     ),
                   ),
                 ),
-              ].divide(const SizedBox(height: 24.0)),
+              ].divide(SizedBox(height: 24.0)),
             ),
           ),
         ),

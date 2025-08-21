@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'solar_charge2_widget.dart' show SolarCharge2Widget;
 import 'package:flutter/material.dart';
 

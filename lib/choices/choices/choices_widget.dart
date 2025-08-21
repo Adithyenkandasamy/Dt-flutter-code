@@ -1,12 +1,17 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'choices_model.dart';
 export 'choices_model.dart';
 
+/// 6 cstegory seperated
 class ChoicesWidget extends StatefulWidget {
-  /// 6 cstegory seperated
   const ChoicesWidget({super.key});
+
+  static String routeName = 'CHOICES';
+  static String routePath = '/choices';
 
   @override
   State<ChoicesWidget> createState() => _ChoicesWidgetState();
@@ -47,7 +52,7 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -56,36 +61,44 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                       Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
                         height: 120.0,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Colors.white,
                         ),
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, -1.0),
+                          alignment: AlignmentDirectional(0.0, -1.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 24.0, 24.0, 24.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     'Easy Way',
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
-                                      fontFamily: 'Inter',
-                                      color: const Color(0xFF14181B),
+                                      font: GoogleFonts.inter(
+                                        fontWeight: FontWeight.bold,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .headlineMedium
+                                            .fontStyle,
+                                      ),
+                                      color: Color(0xFF14181B),
                                       fontSize: 24.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .headlineMedium
+                                          .fontStyle,
                                       shadows: [
                                         Shadow(
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          offset: const Offset(2.0, 2.0),
+                                          offset: Offset(2.0, 2.0),
                                           blurRadius: 2.0,
                                         )
                                       ],
@@ -93,14 +106,15 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
                                     focusColor: Colors.transparent,
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('profilepage');
+                                      context.pushNamed(
+                                          ProfilepageWidget.routeName);
                                     },
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
@@ -119,7 +133,7 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 24.0, 0.0, 24.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -129,11 +143,11 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                               width: 160.0,
                               height: 160.0,
                               decoration: BoxDecoration(
-                                color: const Color(0xFFE3F2FD),
+                                color: Color(0xFFE3F2FD),
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -141,7 +155,8 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed('solar_charging_details');
+                                    context.pushNamed(
+                                        SolarChargingDetailsWidget.routeName);
                                   },
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
@@ -153,7 +168,7 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                         width: 60.0,
                                         height: 60.0,
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFFBBDEFB),
+                                          color: Color(0xFFBBDEFB),
                                           borderRadius:
                                               BorderRadius.circular(30.0),
                                         ),
@@ -165,7 +180,7 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                             width: 70.0,
                                             height: 50.0,
                                             fit: BoxFit.cover,
-                                            alignment: const Alignment(0.0, 0.0),
+                                            alignment: Alignment(0.0, 0.0),
                                           ),
                                         ),
                                       ),
@@ -175,13 +190,30 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
-                                              fontFamily: 'Readex Pro',
-                                              color: const Color(0xFF1565C0),
+                                              font: GoogleFonts.readexPro(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontStyle,
+                                              ),
+                                              color: Color(0xFF1565C0),
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .fontStyle,
                                             ),
                                       ),
-                                    ].divide(const SizedBox(height: 12.0)),
+                                    ].divide(SizedBox(height: 12.0)),
                                   ),
                                 ),
                               ),
@@ -192,17 +224,18 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('Traffic_updates');
+                                context
+                                    .pushNamed(TrafficUpdatesWidget.routeName);
                               },
                               child: Container(
                                 width: 160.0,
                                 height: 160.0,
                                 decoration: BoxDecoration(
-                                  color: const Color(0xFFFFF3E0),
+                                  color: Color(0xFFFFF3E0),
                                   borderRadius: BorderRadius.circular(16.0),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 16.0, 16.0, 16.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
@@ -214,7 +247,7 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                         width: 60.0,
                                         height: 60.0,
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFFFFE0B2),
+                                          color: Color(0xFFFFE0B2),
                                           borderRadius:
                                               BorderRadius.circular(30.0),
                                         ),
@@ -234,13 +267,30 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
-                                              fontFamily: 'Readex Pro',
-                                              color: const Color(0xFFEF6C00),
+                                              font: GoogleFonts.readexPro(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontStyle,
+                                              ),
+                                              color: Color(0xFFEF6C00),
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .fontStyle,
                                             ),
                                       ),
-                                    ].divide(const SizedBox(height: 12.0)),
+                                    ].divide(SizedBox(height: 12.0)),
                                   ),
                                 ),
                               ),
@@ -249,7 +299,7 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 24.0, 0.0, 24.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -261,17 +311,18 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('maintance_alerts');
+                                context
+                                    .pushNamed(MaintanceAlertsWidget.routeName);
                               },
                               child: Container(
                                 width: 160.0,
                                 height: 160.0,
                                 decoration: BoxDecoration(
-                                  color: const Color(0xFFE8F5E9),
+                                  color: Color(0xFFE8F5E9),
                                   borderRadius: BorderRadius.circular(16.0),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 16.0, 16.0, 16.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
@@ -283,7 +334,7 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                         width: 60.0,
                                         height: 60.0,
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFFC8E6C9),
+                                          color: Color(0xFFC8E6C9),
                                           borderRadius:
                                               BorderRadius.circular(30.0),
                                         ),
@@ -300,21 +351,40 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           'Maintenance Alerts',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
                                               .override(
-                                                fontFamily: 'Readex Pro',
-                                                color: const Color(0xFF2E7D32),
+                                                font: GoogleFonts.readexPro(
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontStyle,
+                                                ),
+                                                color: Color(0xFF2E7D32),
                                                 fontSize: 16.0,
                                                 letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontStyle,
                                               ),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(height: 12.0)),
+                                    ].divide(SizedBox(height: 12.0)),
                                   ),
                                 ),
                               ),
@@ -325,17 +395,17 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('smart_grid');
+                                context.pushNamed(SmartGridWidget.routeName);
                               },
                               child: Container(
                                 width: 160.0,
                                 height: 160.0,
                                 decoration: BoxDecoration(
-                                  color: const Color(0xFFF3E5F5),
+                                  color: Color(0xFFF3E5F5),
                                   borderRadius: BorderRadius.circular(16.0),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 16.0, 16.0, 16.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
@@ -349,13 +419,14 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          context.pushNamed('smart_grid');
+                                          context.pushNamed(
+                                              SmartGridWidget.routeName);
                                         },
                                         child: Container(
                                           width: 60.0,
                                           height: 60.0,
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFFE1BEE7),
+                                            color: Color(0xFFE1BEE7),
                                             borderRadius:
                                                 BorderRadius.circular(30.0),
                                           ),
@@ -377,21 +448,41 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          context.pushNamed('smart_grid');
+                                          context.pushNamed(
+                                              SmartGridWidget.routeName);
                                         },
                                         child: Text(
                                           'Smart Grid',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
                                               .override(
-                                                fontFamily: 'Readex Pro',
-                                                color: const Color(0xFF7B1FA2),
+                                                font: GoogleFonts.readexPro(
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontStyle,
+                                                ),
+                                                color: Color(0xFF7B1FA2),
                                                 fontSize: 16.0,
                                                 letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontStyle,
                                               ),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(height: 12.0)),
+                                    ].divide(SizedBox(height: 12.0)),
                                   ),
                                 ),
                               ),
@@ -400,7 +491,7 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 24.0, 0.0, 24.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -410,13 +501,13 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                               width: 160.0,
                               height: 160.0,
                               decoration: BoxDecoration(
-                                color: const Color(0xFFE0F7FA),
+                                color: Color(0xFFE0F7FA),
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Stack(
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -429,7 +520,7 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                           width: 59.0,
                                           height: 60.0,
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFFB2EBF2),
+                                            color: Color(0xFFB2EBF2),
                                             borderRadius:
                                                 BorderRadius.circular(30.0),
                                             shape: BoxShape.rectangle,
@@ -441,7 +532,8 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
                                               context.pushNamed(
-                                                  'charging_stations');
+                                                  ChargingStationsWidget
+                                                      .routeName);
                                             },
                                             child: ClipRRect(
                                               borderRadius:
@@ -461,13 +553,32 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
                                               .override(
-                                                fontFamily: 'Readex Pro',
-                                                color: const Color(0xFF00838F),
+                                                font: GoogleFonts.readexPro(
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyLarge
+                                                          .fontStyle,
+                                                ),
+                                                color: Color(0xFF00838F),
                                                 fontSize: 16.0,
                                                 letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontStyle,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                   ),
                                 ],
@@ -477,11 +588,11 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                               width: 160.0,
                               height: 160.0,
                               decoration: BoxDecoration(
-                                color: const Color(0xFFFCE4EC),
+                                color: Color(0xFFFCE4EC),
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
@@ -492,7 +603,7 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                       width: 60.0,
                                       height: 60.0,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFF8BBD0),
+                                        color: Color(0xFFF8BBD0),
                                         borderRadius:
                                             BorderRadius.circular(20.0),
                                       ),
@@ -502,7 +613,8 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          context.pushNamed('fuel_selection');
+                                          context.pushNamed(
+                                              FuelSelectionWidget.routeName);
                                         },
                                         child: ClipRRect(
                                           borderRadius:
@@ -522,20 +634,37 @@ class _ChoicesWidgetState extends State<ChoicesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: const Color(0xFFC2185B),
+                                            font: GoogleFonts.readexPro(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFFC2185B),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyLarge
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyLarge
+                                                    .fontStyle,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(height: 12.0)),
+                                  ].divide(SizedBox(height: 12.0)),
                                 ),
                               ),
                             ),
                           ],
                         ),
                       ),
-                    ].divide(const SizedBox(height: 24.0)),
+                    ].divide(SizedBox(height: 24.0)),
                   ),
                 ),
               ),

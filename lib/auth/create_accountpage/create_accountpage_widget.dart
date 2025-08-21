@@ -2,13 +2,18 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'create_accountpage_model.dart';
 export 'create_accountpage_model.dart';
 
 class CreateAccountpageWidget extends StatefulWidget {
   const CreateAccountpageWidget({super.key});
+
+  static String routeName = 'CreateAccountpage';
+  static String routePath = '/createAccountpage';
 
   @override
   State<CreateAccountpageWidget> createState() =>
@@ -67,7 +72,7 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
-                  alignment: const AlignmentDirectional(0.0, -1.0),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
@@ -79,19 +84,19 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            borderRadius: const BorderRadius.only(
+                            borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(16.0),
                               bottomRight: Radius.circular(16.0),
                               topLeft: Radius.circular(0.0),
                               topRight: Radius.circular(0.0),
                             ),
                           ),
-                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsets.all(32.0),
+                            padding: EdgeInsets.all(32.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,42 +106,91 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .displaySmall
                                       .override(
-                                        fontFamily: 'Inter Tight',
+                                        font: GoogleFonts.interTight(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .displaySmall
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .displaySmall
+                                                  .fontStyle,
+                                        ),
                                         letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .displaySmall
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .displaySmall
+                                            .fontStyle,
                                       ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 0.0, 24.0),
                                   child: Text(
                                     'Let\'s get started by filling out the form below.',
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMedium
+                                                  .fontStyle,
                                         ),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 16.0),
-                                  child: SizedBox(
+                                  child: Container(
                                     width: 370.0,
                                     child: TextFormField(
                                       controller:
                                           _model.emailAddressTextController,
                                       focusNode: _model.emailAddressFocusNode,
                                       autofocus: true,
-                                      autofillHints: const [AutofillHints.email],
+                                      autofillHints: [AutofillHints.email],
                                       obscureText: false,
                                       decoration: InputDecoration(
                                         labelText: 'Email',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMedium
+                                                        .fontStyle,
+                                              ),
                                               letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontStyle,
                                             ),
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
@@ -181,8 +235,25 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
                                           ),
                                       keyboardType: TextInputType.emailAddress,
                                       validator: _model
@@ -192,23 +263,40 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 16.0),
-                                  child: SizedBox(
+                                  child: Container(
                                     width: 370.0,
                                     child: TextFormField(
                                       controller: _model.passwordTextController,
                                       focusNode: _model.passwordFocusNode,
                                       autofocus: true,
-                                      autofillHints: const [AutofillHints.password],
+                                      autofillHints: [AutofillHints.password],
                                       obscureText: !_model.passwordVisibility,
                                       decoration: InputDecoration(
                                         labelText: 'Password',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMedium
+                                                        .fontStyle,
+                                              ),
                                               letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontStyle,
                                             ),
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
@@ -269,8 +357,25 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
                                           ),
                                       validator: _model
                                           .passwordTextControllerValidator
@@ -279,9 +384,9 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 16.0),
-                                  child: SizedBox(
+                                  child: Container(
                                     width: 370.0,
                                     child: TextFormField(
                                       controller:
@@ -289,7 +394,7 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                       focusNode:
                                           _model.passwordConfirmFocusNode,
                                       autofocus: true,
-                                      autofillHints: const [AutofillHints.password],
+                                      autofillHints: [AutofillHints.password],
                                       obscureText:
                                           !_model.passwordConfirmVisibility,
                                       decoration: InputDecoration(
@@ -297,8 +402,25 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMedium
+                                                        .fontStyle,
+                                              ),
                                               letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .fontStyle,
                                             ),
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
@@ -361,8 +483,25 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
                                           ),
                                       minLines: 1,
                                       validator: _model
@@ -372,7 +511,7 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 16.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
@@ -382,7 +521,7 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                               .text) {
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(
-                                          const SnackBar(
+                                          SnackBar(
                                             content: Text(
                                               'Passwords don\'t match!',
                                             ),
@@ -402,28 +541,46 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                       }
 
                                       context.goNamedAuth(
-                                          'CHOICES', context.mounted);
+                                          ChoicesWidget.routeName,
+                                          context.mounted);
                                     },
                                     text: 'Create Account',
                                     options: FFButtonOptions(
                                       width: 370.0,
                                       height: 44.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 0.0),
                                       iconPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
                                           FlutterFlowTheme.of(context).primary,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
-                                            fontFamily: 'Inter Tight',
+                                            font: GoogleFonts.interTight(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .fontStyle,
+                                            ),
                                             color: Colors.white,
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmall
+                                                    .fontStyle,
                                           ),
                                       elevation: 3.0,
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -434,7 +591,7 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
 
                                 // You will have to add an action on this rich text to go to your login page.
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 0.0, 12.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -442,14 +599,15 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('Login_page');
+                                      context
+                                          .pushNamed(LoginPageWidget.routeName);
                                     },
                                     child: RichText(
                                       textScaler:
                                           MediaQuery.of(context).textScaler,
                                       text: TextSpan(
                                         children: [
-                                          const TextSpan(
+                                          TextSpan(
                                             text: 'Already have an account? ',
                                             style: TextStyle(),
                                           ),
@@ -458,21 +616,50 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight: FontWeight.w600,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primary,
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
                                                 ),
                                           )
                                         ],
                                         style: FlutterFlowTheme.of(context)
                                             .labelLarge
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelLarge
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelLarge
+                                                        .fontStyle,
+                                              ),
                                               letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelLarge
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelLarge
+                                                      .fontStyle,
                                             ),
                                       ),
                                     ),
@@ -495,13 +682,13 @@ class _CreateAccountpageWidgetState extends State<CreateAccountpageWidget> {
                 Expanded(
                   flex: 6,
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: EdgeInsets.all(16.0),
                     child: Container(
                       width: 100.0,
                       height: double.infinity,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        image: const DecorationImage(
+                        image: DecorationImage(
                           fit: BoxFit.cover,
                           image: CachedNetworkImageProvider(
                             'https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1380&q=80',

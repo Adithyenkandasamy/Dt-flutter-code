@@ -3,14 +3,19 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'routes_model.dart';
 export 'routes_model.dart';
 
+/// the page contains with the starting point to end point search option with
+/// the show the best routes for stating to end point for e vehiicles purpose
 class RoutesWidget extends StatefulWidget {
-  /// the page contains with the starting point to end point search option with
-  /// the show the best routes for stating to end point for e vehiicles purpose
   const RoutesWidget({super.key});
+
+  static String routeName = 'routes';
+  static String routePath = '/routes';
 
   @override
   State<RoutesWidget> createState() => _RoutesWidgetState();
@@ -66,26 +71,32 @@ class _RoutesWidgetState extends State<RoutesWidget> {
               size: 24.0,
             ),
             onPressed: () async {
-              context.pushNamed('smart_grid');
+              context.pushNamed(SmartGridWidget.routeName);
             },
           ),
           title: Text(
             'Plan Your Route',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  font: GoogleFonts.interTight(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+                  ),
                   color: FlutterFlowTheme.of(context).primaryText,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.bold,
+                  fontStyle:
+                      FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -104,7 +115,7 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -114,20 +125,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
+                                    ),
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .fontStyle,
                                   ),
                             ),
                             Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               decoration: BoxDecoration(
-                                color: const Color(0xFFF5F5F5),
+                                color: Color(0xFFF5F5F5),
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -154,11 +178,32 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0xFFE0E0E0),
                                                   width: 1.0,
                                                 ),
@@ -166,7 +211,7 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -174,7 +219,7 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               errorBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -183,7 +228,7 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                               ),
                                               focusedErrorBorder:
                                                   OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -196,8 +241,29 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
                                                 ),
                                             minLines: 1,
                                             validator: _model
@@ -205,7 +271,7 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                 .asValidator(context),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 12.0)),
+                                      ].divide(SizedBox(width: 12.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -229,11 +295,32 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0xFFE0E0E0),
                                                   width: 1.0,
                                                 ),
@@ -241,7 +328,7 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -249,7 +336,7 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               errorBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -258,7 +345,7 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                               ),
                                               focusedErrorBorder:
                                                   OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -271,8 +358,29 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                                   letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
                                                 ),
                                             minLines: 1,
                                             validator: _model
@@ -280,13 +388,13 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                 .asValidator(context),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 12.0)),
+                                      ].divide(SizedBox(width: 12.0)),
                                     ),
-                                  ].divide(const SizedBox(height: 12.0)),
+                                  ].divide(SizedBox(height: 12.0)),
                                 ),
                               ),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -303,7 +411,7 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                       onCameraIdle: (latLng) =>
                           _model.googleMapsCenter = latLng,
                       initialLocation: _model.googleMapsCenter ??=
-                          const LatLng(37.4219999, -122.0840575),
+                          LatLng(37.4219999, -122.0840575),
                       markerColor: GoogleMarkerColor.red,
                       mapType: MapType.normal,
                       style: GoogleMapStyle.standard,
@@ -326,7 +434,7 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -340,28 +448,60 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
-                                        fontFamily: 'Inter Tight',
+                                        font: GoogleFonts.interTight(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleMedium
+                                                  .fontStyle,
+                                        ),
                                         color: FlutterFlowTheme.of(context)
                                             .primaryText,
                                         letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .titleMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .titleMedium
+                                            .fontStyle,
                                       ),
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE8F5E9),
+                                    color: Color(0xFFE8F5E9),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 12.0, 8.0, 12.0),
                                     child: Text(
                                       '3 Routes Found',
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
-                                            fontFamily: 'Inter',
-                                            color: const Color(0xFF2E7D32),
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFF2E7D32),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
                                           ),
                                     ),
                                   ),
@@ -371,11 +511,11 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                             Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               decoration: BoxDecoration(
-                                color: const Color(0xFFF5F5F5),
+                                color: Color(0xFFF5F5F5),
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -396,10 +536,23 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyLarge
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyLarge
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .fontStyle,
                                                       ),
                                             ),
                                             Text(
@@ -408,25 +561,46 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ],
                                         ),
                                         Container(
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFFE3F2FD),
+                                            color: Color(0xFFE3F2FD),
                                             borderRadius:
                                                 BorderRadius.circular(20.0),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 12.0, 8.0, 12.0),
                                             child: Text(
                                               'Recommended',
@@ -434,10 +608,31 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
-                                                            const Color(0xFF1565C0),
+                                                            Color(0xFF1565C0),
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ),
@@ -460,12 +655,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                             ),
                                             Text(
@@ -474,12 +690,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ],
@@ -493,10 +730,10 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                             width: 100.0,
                                             height: 36.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
@@ -504,12 +741,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .bodySmall
                                                     .override(
-                                                      fontFamily: 'Inter',
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .info,
                                                       letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
                                                     ),
                                             elevation: 0.0,
                                             borderRadius:
@@ -518,18 +776,18 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                         ),
                                       ],
                                     ),
-                                  ].divide(const SizedBox(height: 12.0)),
+                                  ].divide(SizedBox(height: 12.0)),
                                 ),
                               ),
                             ),
                             Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               decoration: BoxDecoration(
-                                color: const Color(0xFFF5F5F5),
+                                color: Color(0xFFF5F5F5),
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -550,10 +808,23 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyLarge
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyLarge
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .fontStyle,
                                                       ),
                                             ),
                                             Text(
@@ -562,12 +833,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ],
@@ -590,12 +882,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                             ),
                                             Text(
@@ -604,12 +917,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ],
@@ -623,10 +957,10 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                             width: 100.0,
                                             height: 36.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
@@ -634,12 +968,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .bodySmall
                                                     .override(
-                                                      fontFamily: 'Inter',
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .info,
                                                       letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
                                                     ),
                                             elevation: 0.0,
                                             borderRadius:
@@ -648,18 +1003,18 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                         ),
                                       ],
                                     ),
-                                  ].divide(const SizedBox(height: 12.0)),
+                                  ].divide(SizedBox(height: 12.0)),
                                 ),
                               ),
                             ),
                             Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               decoration: BoxDecoration(
-                                color: const Color(0xFFF5F5F5),
+                                color: Color(0xFFF5F5F5),
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -680,10 +1035,23 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyLarge
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyLarge
+                                                                  .fontStyle,
+                                                        ),
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .fontStyle,
                                                       ),
                                             ),
                                             Text(
@@ -692,12 +1060,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ],
@@ -720,12 +1109,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
                                                       ),
                                             ),
                                             Text(
@@ -734,12 +1144,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodySmall
+                                                                  .fontStyle,
+                                                        ),
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
                                                       ),
                                             ),
                                           ],
@@ -753,10 +1184,10 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                             width: 100.0,
                                             height: 36.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
@@ -764,12 +1195,33 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .bodySmall
                                                     .override(
-                                                      fontFamily: 'Inter',
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .info,
                                                       letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
                                                     ),
                                             elevation: 0.0,
                                             borderRadius:
@@ -778,11 +1230,11 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                                         ),
                                       ],
                                     ),
-                                  ].divide(const SizedBox(height: 12.0)),
+                                  ].divide(SizedBox(height: 12.0)),
                                 ),
                               ),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -800,7 +1252,7 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -810,10 +1262,23 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
+                                    ),
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .fontStyle,
                                   ),
                             ),
                             Wrap(
@@ -828,92 +1293,160 @@ class _RoutesWidgetState extends State<RoutesWidget> {
                               children: [
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE3F2FD),
+                                    color: Color(0xFFE3F2FD),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 16.0, 8.0, 16.0),
                                     child: Text(
                                       'Fast Charging Only',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
-                                            color: const Color(0xFF1565C0),
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFF1565C0),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
                                           ),
                                     ),
                                   ),
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE3F2FD),
+                                    color: Color(0xFFE3F2FD),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 16.0, 8.0, 16.0),
                                     child: Text(
                                       'Avoid Tolls',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
-                                            color: const Color(0xFF1565C0),
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFF1565C0),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
                                           ),
                                     ),
                                   ),
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE3F2FD),
+                                    color: Color(0xFFE3F2FD),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 16.0, 8.0, 16.0),
                                     child: Text(
                                       'Include Scenic Routes',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
-                                            color: const Color(0xFF1565C0),
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFF1565C0),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
                                           ),
                                     ),
                                   ),
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE3F2FD),
+                                    color: Color(0xFFE3F2FD),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 16.0, 8.0, 16.0),
                                     child: Text(
                                       'Minimize Stops',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
-                                            color: const Color(0xFF1565C0),
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFF1565C0),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
                                           ),
                                     ),
                                   ),
                                 ),
                               ],
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
                   ),
-                ].divide(const SizedBox(height: 24.0)),
+                ].divide(SizedBox(height: 24.0)),
               ),
             ),
           ),

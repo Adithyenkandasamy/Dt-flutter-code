@@ -2,13 +2,18 @@ import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'traffic_map_model.dart';
 export 'traffic_map_model.dart';
 
 class TrafficMapWidget extends StatefulWidget {
   const TrafficMapWidget({super.key});
+
+  static String routeName = 'traffic_map';
+  static String routePath = '/trafficMap';
 
   @override
   State<TrafficMapWidget> createState() => _TrafficMapWidgetState();
@@ -62,15 +67,24 @@ class _TrafficMapWidgetState extends State<TrafficMapWidget> {
               size: 24.0,
             ),
             onPressed: () async {
-              context.pushNamed('Traffic_updates');
+              context.pushNamed(TrafficUpdatesWidget.routeName);
             },
           ),
           title: Text(
             'Location',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  font: GoogleFonts.interTight(
+                    fontWeight:
+                        FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+                  ),
                   color: FlutterFlowTheme.of(context).primaryText,
                   letterSpacing: 0.0,
+                  fontWeight:
+                      FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+                  fontStyle:
+                      FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                 ),
           ),
           actions: [
@@ -114,19 +128,19 @@ class _TrafficMapWidgetState extends State<TrafficMapWidget> {
                         Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: MediaQuery.sizeOf(context).height * 1.0,
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             color: Color(0x11000000),
                           ),
                           child: Stack(
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: FlutterFlowGoogleMap(
                                   controller: _model.googleMapsController,
                                   onCameraIdle: (latLng) =>
                                       _model.googleMapsCenter = latLng,
                                   initialLocation: _model.googleMapsCenter ??=
-                                      const LatLng(11.1271, 78.6569),
+                                      LatLng(11.1271, 78.6569),
                                   markerColor: GoogleMarkerColor.violet,
                                   mapType: MapType.terrain,
                                   style: GoogleMapStyle.standard,
@@ -161,7 +175,7 @@ class _TrafficMapWidgetState extends State<TrafficMapWidget> {
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 20.0, 20.0, 20.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -171,8 +185,21 @@ class _TrafficMapWidgetState extends State<TrafficMapWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .headlineSmall
+                                        .fontStyle,
+                                  ),
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .fontStyle,
                                 ),
                           ),
                           Row(
@@ -188,9 +215,19 @@ class _TrafficMapWidgetState extends State<TrafficMapWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight: FontWeight.w500,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyLarge
+                                                    .fontStyle,
+                                          ),
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyLarge
+                                                  .fontStyle,
                                         ),
                                   ),
                                   Text(
@@ -198,10 +235,27 @@ class _TrafficMapWidgetState extends State<TrafficMapWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
                                         ),
                                   ),
                                 ],
@@ -222,7 +276,7 @@ class _TrafficMapWidgetState extends State<TrafficMapWidget> {
                               ),
                             ],
                           ),
-                        ].divide(const SizedBox(height: 16.0)),
+                        ].divide(SizedBox(height: 16.0)),
                       ),
                     ),
                   ),
@@ -241,7 +295,7 @@ class _TrafficMapWidgetState extends State<TrafficMapWidget> {
                     ),
                   ),
                 ),
-              ].divide(const SizedBox(height: 24.0)),
+              ].divide(SizedBox(height: 24.0)),
             ),
           ),
         ),

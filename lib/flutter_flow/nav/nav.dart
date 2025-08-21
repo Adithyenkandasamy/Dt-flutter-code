@@ -5,9 +5,10 @@ import 'package:provider/provider.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
-import '/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+
+import '/index.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -75,130 +76,130 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const ChoicesWidget() : const WelcomePageWidget(),
+          appStateNotifier.loggedIn ? ChoicesWidget() : WelcomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const ChoicesWidget() : const WelcomePageWidget(),
+              appStateNotifier.loggedIn ? ChoicesWidget() : WelcomePageWidget(),
         ),
         FFRoute(
-          name: 'CHOICES',
-          path: '/choices',
+          name: ChoicesWidget.routeName,
+          path: ChoicesWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const ChoicesWidget(),
+          builder: (context, params) => ChoicesWidget(),
         ),
         FFRoute(
-          name: 'solar_charging_details',
-          path: '/solarChargingDetails',
-          builder: (context, params) => const SolarChargingDetailsWidget(),
+          name: SolarChargingDetailsWidget.routeName,
+          path: SolarChargingDetailsWidget.routePath,
+          builder: (context, params) => SolarChargingDetailsWidget(),
         ),
         FFRoute(
-          name: 'Traffic_updates',
-          path: '/trafficUpdates',
-          builder: (context, params) => const TrafficUpdatesWidget(),
+          name: TrafficUpdatesWidget.routeName,
+          path: TrafficUpdatesWidget.routePath,
+          builder: (context, params) => TrafficUpdatesWidget(),
         ),
         FFRoute(
-          name: 'maintance_alerts',
-          path: '/maintanceAlerts',
-          builder: (context, params) => const MaintanceAlertsWidget(),
+          name: MaintanceAlertsWidget.routeName,
+          path: MaintanceAlertsWidget.routePath,
+          builder: (context, params) => MaintanceAlertsWidget(),
         ),
         FFRoute(
-          name: 'smart_grid',
-          path: '/smartGrid',
-          builder: (context, params) => const SmartGridWidget(),
+          name: SmartGridWidget.routeName,
+          path: SmartGridWidget.routePath,
+          builder: (context, params) => SmartGridWidget(),
         ),
         FFRoute(
-          name: 'charging_stations',
-          path: '/chargingStations',
-          builder: (context, params) => const ChargingStationsWidget(),
+          name: ChargingStationsWidget.routeName,
+          path: ChargingStationsWidget.routePath,
+          builder: (context, params) => ChargingStationsWidget(),
         ),
         FFRoute(
-          name: 'fuel_selection',
-          path: '/fuelSelection',
-          builder: (context, params) => const FuelSelectionWidget(),
+          name: FuelSelectionWidget.routeName,
+          path: FuelSelectionWidget.routePath,
+          builder: (context, params) => FuelSelectionWidget(),
         ),
         FFRoute(
-          name: 'CreateAccountpage',
-          path: '/createAccountpage',
-          builder: (context, params) => const CreateAccountpageWidget(),
+          name: CreateAccountpageWidget.routeName,
+          path: CreateAccountpageWidget.routePath,
+          builder: (context, params) => CreateAccountpageWidget(),
         ),
         FFRoute(
-          name: 'Login_page',
-          path: '/loginPage',
-          builder: (context, params) => const LoginPageWidget(),
+          name: LoginPageWidget.routeName,
+          path: LoginPageWidget.routePath,
+          builder: (context, params) => LoginPageWidget(),
         ),
         FFRoute(
-          name: 'ForgotPassword_page',
-          path: '/forgotPasswordPage',
-          builder: (context, params) => const ForgotPasswordPageWidget(),
+          name: ForgotPasswordPageWidget.routeName,
+          path: ForgotPasswordPageWidget.routePath,
+          builder: (context, params) => ForgotPasswordPageWidget(),
         ),
         FFRoute(
-          name: 'profilepage',
-          path: '/profilepage',
+          name: ProfilepageWidget.routeName,
+          path: ProfilepageWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const ProfilepageWidget(),
+          builder: (context, params) => ProfilepageWidget(),
         ),
         FFRoute(
-          name: 'traffic_map',
-          path: '/trafficMap',
-          builder: (context, params) => const TrafficMapWidget(),
+          name: TrafficMapWidget.routeName,
+          path: TrafficMapWidget.routePath,
+          builder: (context, params) => TrafficMapWidget(),
         ),
         FFRoute(
-          name: 'nearby_charging_stations',
-          path: '/nearbyChargingStations',
-          builder: (context, params) => const NearbyChargingStationsWidget(),
+          name: NearbyChargingStationsWidget.routeName,
+          path: NearbyChargingStationsWidget.routePath,
+          builder: (context, params) => NearbyChargingStationsWidget(),
         ),
         FFRoute(
-          name: 'maintance_calendar',
-          path: '/maintanceCalendar',
-          builder: (context, params) => const MaintanceCalendarWidget(),
+          name: MaintanceCalendarWidget.routeName,
+          path: MaintanceCalendarWidget.routePath,
+          builder: (context, params) => MaintanceCalendarWidget(),
         ),
         FFRoute(
-          name: 'change_password',
-          path: '/changePassword',
-          builder: (context, params) => const ChangePasswordWidget(),
+          name: ChangePasswordWidget.routeName,
+          path: ChangePasswordWidget.routePath,
+          builder: (context, params) => ChangePasswordWidget(),
         ),
         FFRoute(
-          name: 'edit_profile',
-          path: '/editProfile',
-          builder: (context, params) => const EditProfileWidget(),
+          name: EditProfileWidget.routeName,
+          path: EditProfileWidget.routePath,
+          builder: (context, params) => EditProfileWidget(),
         ),
         FFRoute(
-          name: 'charge_all',
-          path: '/chargeAll',
-          builder: (context, params) => const ChargeAllWidget(),
+          name: ChargeAllWidget.routeName,
+          path: ChargeAllWidget.routePath,
+          builder: (context, params) => ChargeAllWidget(),
         ),
         FFRoute(
-          name: 'solar_charge2',
-          path: '/solarCharge2',
-          builder: (context, params) => const SolarCharge2Widget(),
+          name: SolarCharge2Widget.routeName,
+          path: SolarCharge2Widget.routePath,
+          builder: (context, params) => SolarCharge2Widget(),
         ),
         FFRoute(
-          name: 'routes',
-          path: '/routes',
-          builder: (context, params) => const RoutesWidget(),
+          name: RoutesWidget.routeName,
+          path: RoutesWidget.routePath,
+          builder: (context, params) => RoutesWidget(),
         ),
         FFRoute(
-          name: 'welcome_page',
-          path: '/welcomePage',
-          builder: (context, params) => const WelcomePageWidget(),
+          name: WelcomePageWidget.routeName,
+          path: WelcomePageWidget.routePath,
+          builder: (context, params) => WelcomePageWidget(),
         ),
         FFRoute(
-          name: 'services',
-          path: '/services',
-          builder: (context, params) => const ServicesWidget(),
+          name: ServicesWidget.routeName,
+          path: ServicesWidget.routePath,
+          builder: (context, params) => ServicesWidget(),
         ),
         FFRoute(
-          name: 'charging_schedule',
-          path: '/chargingSchedule',
-          builder: (context, params) => const ChargingScheduleWidget(),
+          name: ChargingScheduleWidget.routeName,
+          path: ChargingScheduleWidget.routePath,
+          builder: (context, params) => ChargingScheduleWidget(),
         ),
         FFRoute(
-          name: 'get_profile_details',
-          path: '/getProfileDetails',
-          builder: (context, params) => const GetProfileDetailsWidget(),
+          name: GetProfileDetailsWidget.routeName,
+          path: GetProfileDetailsWidget.routePath,
+          builder: (context, params) => GetProfileDetailsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -436,7 +437,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

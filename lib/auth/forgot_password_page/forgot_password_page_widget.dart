@@ -4,11 +4,15 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'forgot_password_page_model.dart';
 export 'forgot_password_page_model.dart';
 
 class ForgotPasswordPageWidget extends StatefulWidget {
   const ForgotPasswordPageWidget({super.key});
+
+  static String routeName = 'ForgotPassword_page';
+  static String routePath = '/forgotPasswordPage';
 
   @override
   State<ForgotPasswordPageWidget> createState() =>
@@ -60,18 +64,18 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
             context.pop();
           },
         ),
-        actions: const [],
+        actions: [],
         centerTitle: false,
         elevation: 0.0,
       ),
       body: Align(
-        alignment: const AlignmentDirectional(0.0, -1.0),
+        alignment: AlignmentDirectional(0.0, -1.0),
         child: Container(
           width: double.infinity,
-          constraints: const BoxConstraints(
+          constraints: BoxConstraints(
             maxWidth: 570.0,
           ),
-          decoration: const BoxDecoration(),
+          decoration: BoxDecoration(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,7 +87,7 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                 tablet: false,
               ))
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -96,7 +100,7 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 12.0, 0.0, 12.0),
                           child: Icon(
                             Icons.arrow_back_rounded,
@@ -105,15 +109,28 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Back',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
                                   letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
                                 ),
                           ),
                         ),
@@ -122,46 +139,96 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                   ),
                 ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                 child: Text(
                   'Forgot Password',
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
-                        fontFamily: 'Inter Tight',
+                        font: GoogleFonts.interTight(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .headlineMedium
+                              .fontWeight,
+                          fontStyle: FlutterFlowTheme.of(context)
+                              .headlineMedium
+                              .fontStyle,
+                        ),
                         letterSpacing: 0.0,
+                        fontWeight: FlutterFlowTheme.of(context)
+                            .headlineMedium
+                            .fontWeight,
+                        fontStyle: FlutterFlowTheme.of(context)
+                            .headlineMedium
+                            .fontStyle,
                       ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 16.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 16.0),
                 child: Text(
                   'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
                   style: FlutterFlowTheme.of(context).labelMedium.override(
-                        fontFamily: 'Inter',
+                        font: GoogleFonts.inter(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .fontWeight,
+                          fontStyle: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .fontStyle,
+                        ),
                         letterSpacing: 0.0,
+                        fontWeight:
+                            FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).labelMedium.fontStyle,
                       ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
-                child: SizedBox(
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                child: Container(
                   width: double.infinity,
                   child: TextFormField(
                     controller: _model.emailAddressTextController,
                     focusNode: _model.emailAddressFocusNode,
-                    autofillHints: const [AutofillHints.email],
+                    autofillHints: [AutofillHints.email],
                     obscureText: false,
                     decoration: InputDecoration(
                       labelText: 'Your email address...',
                       labelStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Inter',
+                                font: GoogleFonts.inter(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
                               ),
                       hintText: 'Enter your email...',
                       hintStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Inter',
+                                font: GoogleFonts.inter(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
                               ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -194,12 +261,24 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                       filled: true,
                       fillColor:
                           FlutterFlowTheme.of(context).secondaryBackground,
-                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                      contentPadding: EdgeInsetsDirectional.fromSTEB(
                           24.0, 24.0, 20.0, 24.0),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Inter',
+                          font: GoogleFonts.inter(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
+                          ),
                           letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                         ),
                     maxLines: null,
                     keyboardType: TextInputType.emailAddress,
@@ -210,15 +289,15 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
+                      EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       if (_model.emailAddressTextController.text.isEmpty) {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
+                          SnackBar(
                             content: Text(
                               'Email required!',
                             ),
@@ -236,17 +315,30 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                       width: double.infinity,
                       height: 50.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Inter Tight',
+                                font: GoogleFonts.interTight(
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
+                                ),
                                 letterSpacing: 0.0,
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .fontStyle,
                               ),
                       elevation: 3.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

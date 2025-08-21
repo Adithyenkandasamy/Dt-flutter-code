@@ -1,13 +1,18 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'smart_grid_model.dart';
 export 'smart_grid_model.dart';
 
+/// smart grid for vehicles
 class SmartGridWidget extends StatefulWidget {
-  /// smart grid for vehicles
   const SmartGridWidget({super.key});
+
+  static String routeName = 'smart_grid';
+  static String routePath = '/smartGrid';
 
   @override
   State<SmartGridWidget> createState() => _SmartGridWidgetState();
@@ -55,16 +60,22 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
               size: 24.0,
             ),
             onPressed: () async {
-              context.pushNamed('CHOICES');
+              context.pushNamed(ChoicesWidget.routeName);
             },
           ),
           title: Text(
             'Vehicle Fleet',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  font: GoogleFonts.interTight(
+                    fontWeight: FontWeight.bold,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+                  ),
                   color: FlutterFlowTheme.of(context).primaryText,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.bold,
+                  fontStyle:
+                      FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                 ),
           ),
           actions: [
@@ -87,7 +98,7 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -105,13 +116,13 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -123,28 +134,62 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .override(
-                                          fontFamily: 'Inter Tight',
+                                          font: GoogleFonts.interTight(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleMedium
+                                                    .fontStyle,
+                                          ),
                                           color: FlutterFlowTheme.of(context)
                                               .primaryText,
                                           letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleMedium
+                                                  .fontStyle,
                                         ),
                                   ),
                                   Container(
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFE3F2FD),
+                                      color: Color(0xFFE3F2FD),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           8.0, 12.0, 8.0, 12.0),
                                       child: Text(
                                         '4 Active',
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Inter',
-                                              color: const Color(0xFF1565C0),
+                                              font: GoogleFonts.inter(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .fontStyle,
+                                              ),
+                                              color: Color(0xFF1565C0),
                                               letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontStyle,
                                             ),
                                       ),
                                     ),
@@ -153,12 +198,12 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: GridView(
                                 padding: EdgeInsets.zero,
                                 gridDelegate:
-                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                    SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: 2,
                                   crossAxisSpacing: 16.0,
                                   mainAxisSpacing: 16.0,
@@ -169,11 +214,11 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                 children: [
                                   Container(
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFE8F5E9),
+                                      color: Color(0xFFE8F5E9),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -187,31 +232,63 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                             children: [
                                               Text(
                                                 'Tesla Model 3',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyLarge
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color:
-                                                              const Color(0xFF2E7D32),
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyLarge
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .fontStyle,
+                                                      ),
+                                                      color: Color(0xFF2E7D32),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyLarge
+                                                              .fontStyle,
+                                                    ),
                                               ),
                                               Text(
                                                 'Available',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color:
-                                                              const Color(0xFF2E7D32),
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color: Color(0xFF2E7D32),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
-                                            ].divide(const SizedBox(height: 8.0)),
+                                            ].divide(SizedBox(height: 8.0)),
                                           ),
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -220,31 +297,75 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                             children: [
                                               Text(
                                                 'Battery: 82%',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
                                               Text(
                                                 'Range: 267 mi',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
-                                            ].divide(const SizedBox(height: 4.0)),
+                                            ].divide(SizedBox(height: 4.0)),
                                           ),
                                         ],
                                       ),
@@ -252,11 +373,11 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                   ),
                                   Container(
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFFFF3E0),
+                                      color: Color(0xFFFFF3E0),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -270,31 +391,63 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                             children: [
                                               Text(
                                                 'BMW i4',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyLarge
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color:
-                                                              const Color(0xFFEF6C00),
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyLarge
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .fontStyle,
+                                                      ),
+                                                      color: Color(0xFFEF6C00),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyLarge
+                                                              .fontStyle,
+                                                    ),
                                               ),
                                               Text(
                                                 'In Service',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color:
-                                                              const Color(0xFFEF6C00),
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color: Color(0xFFEF6C00),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
-                                            ].divide(const SizedBox(height: 8.0)),
+                                            ].divide(SizedBox(height: 8.0)),
                                           ),
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -303,31 +456,75 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                             children: [
                                               Text(
                                                 'Battery: 45%',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
                                               Text(
                                                 'Range: 156 mi',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
-                                            ].divide(const SizedBox(height: 4.0)),
+                                            ].divide(SizedBox(height: 4.0)),
                                           ),
                                         ],
                                       ),
@@ -335,11 +532,11 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                   ),
                                   Container(
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFE3F2FD),
+                                      color: Color(0xFFE3F2FD),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -353,31 +550,63 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                             children: [
                                               Text(
                                                 'Porsche Taycan',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyLarge
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color:
-                                                              const Color(0xFF1565C0),
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyLarge
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .fontStyle,
+                                                      ),
+                                                      color: Color(0xFF1565C0),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyLarge
+                                                              .fontStyle,
+                                                    ),
                                               ),
                                               Text(
                                                 'Charging',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color:
-                                                              const Color(0xFF1565C0),
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color: Color(0xFF1565C0),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
-                                            ].divide(const SizedBox(height: 8.0)),
+                                            ].divide(SizedBox(height: 8.0)),
                                           ),
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -386,31 +615,75 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                             children: [
                                               Text(
                                                 'Battery: 28%',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
                                               Text(
                                                 'Range: 89 mi',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
-                                            ].divide(const SizedBox(height: 4.0)),
+                                            ].divide(SizedBox(height: 4.0)),
                                           ),
                                         ],
                                       ),
@@ -418,11 +691,11 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                   ),
                                   Container(
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFFFEBEE),
+                                      color: Color(0xFFFFEBEE),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -436,33 +709,69 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                             children: [
                                               Text(
                                                 'Audi e-tron',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyLarge
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyLarge
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyLarge
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .error,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                        ),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyLarge
+                                                              .fontStyle,
+                                                    ),
                                               ),
                                               Text(
                                                 'Maintenance',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .error,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
-                                            ].divide(const SizedBox(height: 8.0)),
+                                            ].divide(SizedBox(height: 8.0)),
                                           ),
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -471,31 +780,75 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                             children: [
                                               Text(
                                                 'Battery: 0%',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
                                               Text(
                                                 'Range: 0 mi',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodySmall
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodySmall
+                                                                .fontStyle,
+                                                      ),
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
                                                               .secondaryText,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmall
+                                                              .fontStyle,
+                                                    ),
                                               ),
-                                            ].divide(const SizedBox(height: 4.0)),
+                                            ].divide(SizedBox(height: 4.0)),
                                           ),
                                         ],
                                       ),
@@ -504,7 +857,7 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                 ],
                               ),
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
@@ -522,7 +875,7 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -532,10 +885,23 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
+                                    ),
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
                                     letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .fontStyle,
                                   ),
                             ),
                             Row(
@@ -550,7 +916,7 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                       width: 50.0,
                                       height: 50.0,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFE3F2FD),
+                                        color: Color(0xFFE3F2FD),
                                         borderRadius:
                                             BorderRadius.circular(25.0),
                                       ),
@@ -560,9 +926,10 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          context.pushNamed('charge_all');
+                                          context.pushNamed(
+                                              ChargeAllWidget.routeName);
                                         },
-                                        child: const Icon(
+                                        child: Icon(
                                           Icons.bolt,
                                           color: Color(0xFF1565C0),
                                           size: 24.0,
@@ -574,11 +941,28 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
-                                            fontFamily: 'Inter',
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontStyle,
+                                            ),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(height: 8.0)),
+                                  ].divide(SizedBox(height: 8.0)),
                                 ),
                                 Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -588,7 +972,7 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                       width: 50.0,
                                       height: 50.0,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFE8F5E9),
+                                        color: Color(0xFFE8F5E9),
                                         borderRadius:
                                             BorderRadius.circular(25.0),
                                       ),
@@ -598,9 +982,10 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          context.pushNamed('routes');
+                                          context.pushNamed(
+                                              RoutesWidget.routeName);
                                         },
-                                        child: const Icon(
+                                        child: Icon(
                                           Icons.route,
                                           color: Color(0xFF2E7D32),
                                           size: 24.0,
@@ -612,11 +997,28 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
-                                            fontFamily: 'Inter',
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontStyle,
+                                            ),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(height: 8.0)),
+                                  ].divide(SizedBox(height: 8.0)),
                                 ),
                                 Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -626,7 +1028,7 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                       width: 50.0,
                                       height: 50.0,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFFFF3E0),
+                                        color: Color(0xFFFFF3E0),
                                         borderRadius:
                                             BorderRadius.circular(25.0),
                                       ),
@@ -636,9 +1038,10 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          context.pushNamed('services');
+                                          context.pushNamed(
+                                              ServicesWidget.routeName);
                                         },
-                                        child: const Icon(
+                                        child: Icon(
                                           Icons.build,
                                           color: Color(0xFFEF6C00),
                                           size: 24.0,
@@ -650,11 +1053,28 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
-                                            fontFamily: 'Inter',
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontStyle,
+                                            ),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(height: 8.0)),
+                                  ].divide(SizedBox(height: 8.0)),
                                 ),
                                 Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -664,7 +1084,7 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                       width: 50.0,
                                       height: 50.0,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFE0E0E0),
+                                        color: Color(0xFFE0E0E0),
                                         borderRadius:
                                             BorderRadius.circular(25.0),
                                       ),
@@ -680,20 +1100,37 @@ class _SmartGridWidgetState extends State<SmartGridWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
-                                            fontFamily: 'Inter',
+                                            font: GoogleFonts.inter(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .fontStyle,
+                                            ),
                                             letterSpacing: 0.0,
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmall
+                                                    .fontStyle,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(height: 8.0)),
+                                  ].divide(SizedBox(height: 8.0)),
                                 ),
                               ],
                             ),
-                          ].divide(const SizedBox(height: 16.0)),
+                          ].divide(SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
                   ),
-                ].divide(const SizedBox(height: 24.0)),
+                ].divide(SizedBox(height: 24.0)),
               ),
             ),
           ),

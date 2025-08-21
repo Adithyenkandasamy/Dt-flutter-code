@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'charging_schedule_widget.dart' show ChargingScheduleWidget;
 import 'package:flutter/material.dart';
 
